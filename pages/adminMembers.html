@@ -6,8 +6,8 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title id="page-title"></title>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+   <title id="page-title"></title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
     <!-- Bootstrap core CSS     -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -16,9 +16,15 @@
     <!--     Fonts and icons     -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+
+
+    <style>
+
+button.action {width: 220px;
+              text-align:left;}
+
+</style>
 </head>
-
-
 
 <body>
     <div class="wrapper">
@@ -28,11 +34,10 @@
         Tip 2: you can also add an image using data-image tag
         Tip 3: you can change the color of the sidebar with data-background-color="white | black"
     -->
-             <div class="logo" id="logo-title-link">               
+            <div class="logo" id="logo-title-link">               
             </div>
             <div class="logo logo-mini" id="logo-mini-link">               
             </div>
-
 
 
             <div class="sidebar-wrapper">
@@ -42,46 +47,47 @@
                     </div>
                     <div class="info">
                         <a data-toggle="collapse" href="#collapseExample" class="collapsed" id="user-name">
-                            
+                           
                             <b class="caret"></b>
                         </a>
                         <div class="collapse" id="collapseExample">
                             <ul class="nav">
                                 <li>
                                     <a href="myProfile.html">My Profile</a>
-                                </li>                                   
+                                </li>
+                               
                             </ul>
                         </div>
                     </div>
                 </div>
-                <ul class="nav">
+               <ul class="nav">
                     <li>
                         <a href="./index.html">
                             <i class="material-icons">dashboard</i>
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li class="active">
+                   </li>
+                        <li>
                         <a href="./proposals.html">
                             <i class="material-icons">image</i>
                             <p>Proposals</p>
                         </a>
+                    </li>                       
                     </li>
-                    <li>
+                     <li>
                         <a href="./delegations.html">
                             <i class="material-icons">apps</i>
                             <p>Delegations</p>
                         </a>
-                    </li>
-                   
-                       
-                     
-                      <li>
-                        <a href="./adminMembers.html">
+                    </li>                                                          
+
+                      <li class="active">
+                        <a href="./admin.html">
                             <i class="material-icons">supervisor_account</i>
                             <p>Admin Actions</p>
                         </a>
-                    </li>           
+                    </li>                                   
                 </ul>
             </div>
         </div>
@@ -101,7 +107,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="proposals.html"> Proposals</a>
+                        <a class="navbar-brand" href="adminMembers.html"> Admin Manage Members</a>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -119,7 +125,8 @@
                             <li><a id="menu-signup" href="#"><i class="material-icons">vpn_key</i></span> Sign Up</a></li>
                             <li><a id="menu-login" href="#"><i class="material-icons">lock_open</i>Login</a></li>
                
-                             <li><button  style = "display:none" class="btn btn-primary btn-round" id="buy-tokens">
+                            
+                           <li><button  style = "display:none" class="btn btn-primary btn-round" id="buy-tokens">
                                         <i class="material-icons">shop_two</i> Buy more tokens
                             <div class="ripple-container"></div></button></li>
 
@@ -135,8 +142,6 @@
                             </button></li>
 
                            
-
-                            
                             <li class="dropdown">
                                 <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="material-icons">person</i>
@@ -154,54 +159,109 @@
                         </ul>                        
                     </div>
                 </div>
-            </nav>
+            </nav>    
             <div class="content">
-                <div class="container-fluid">
-
-                      <div class="row">
+                <div class="container-fluid">        
+                 <div class="row">
                        <div class="col-lg-10 col-md-10 col-sm-12">
                             <div class="card">
-                               <div class="card-header card-header-icon" data-background-color="green">
-                                    <i class="material-icons">power_settings_new</i>                                                               
+                                <div class="card-header card-header-icon" data-background-color="green">
+                                    <i class="material-icons">language</i>
+                                    
                                     <p class="category"></p>
-                                </div>  
-                                
-                                <div class="card-content table-responsive" >
-                                    Your options<BR><BR>
-                                    <button class="btn btn-success btn-round" id="start-idea-proposal">
-                                        <i class="material-icons">shop_two</i> Start new idea proposal
-                                    <div class="ripple-container"></div></button>
+                                </div>
+                                <div class="card-content table-responsive" >  
+                                    <h4 class="card-title">Global Admin Options</h4>                                 
+                                     <table class="table table-hover">
+                                                    <tbody>
+                                                        
+                                                            <tr>                                                             
+                                                             <td> <button class="btn btn-primary btn-round action" id="reset-delegation">
+                                                            <i class="material-icons">refresh</i> Reset Delegation
+                                                                <div class="ripple-container"></div></button>
+                                                            </td>
 
-                                   
+                                                                    <td>This action will cancel all vote delegations in the system. It is irreversible.</td>
+                                                             </tr>
 
-                                   
+                                                          <tr>                                                             
+                                                             <td><button class="btn btn-warning btn-round action" id="withdraw-delegation">
+                                                                <i class="material-icons">cancel</i> Withdraw Delegation
+                                                                <div class="ripple-container"></div></button>
+                                                            </td>
+
+                                                                    <td>This action will withdraw delegation from a member to whom delegation was given by the owner of this account. 
+                                                                    
+                                                                    </td>
+                                                             </tr>
+                                                         <tr>                                                             
+                                                             <td><button class="btn btn-success btn-round action" id="change-rules-stats">
+                                                                    <i class="material-icons">change_history</i> Change Rules
+
+                                                                    <div class="ripple-container"></div>
+                                                                    </button>
+                                                            </td>
+
+                                                                    <td>Change voting parameters. Debating period, minimum quorum to pass the vote.</td>
+                                                             </tr>
+
+                                                             
+                                                         
+                                                        
+
+                                                             <tr>                                                             
+                                                             <td><button  class="btn btn-purple btn-round action" id="tally-proposals">
+                                                                    <i class="material-icons">gavel</i>Tally Proposals
+
+                                                                    <div class="ripple-container"></div>
+                                                                    </button>
+                                                            </td>
+
+                                                                    <td>When debating period is reached, admin can tally proposals. Until tallying is executed, action intended by proposals can't be enacted.</td>
+                                                             </tr>
+
+                                                        <tr>                                                             
+                                                             <td> <button class="btn btn-rose btn-round action" id="change-token-parms">
+                                                                    <i class="material-icons">settings_input_composite</i> Change Token Parms
+
+                                                                    <div class="ripple-container"></div>
+                                                                    </button>
+                                                            </td>
+
+                                                                    <td>This action allows on changing of token price and start and end date of token sale. </td>
+                                                             </tr>                                                                                                                                                                                                                  
+                                                    </tbody>
+                                                </table>
+                                               
                                 </div>
                             </div>
                         </div>
-                    </div>
+              </div>
 
                     <div class="row">
                        <div class="col-lg-10 col-md-10 col-sm-12">
                             <div class="card">
-                                <div class="card-header card-header-icon" data-background-color="green">
+                                 <div class="card-header card-header-icon" data-background-color="green">
                                     <i class="material-icons">android</i>                                                                 
                                     <p class="category"></p>
-                                </div>                                                                                          
-                                 <div class="card-content" >
-                                      <h4 class="card-title">Proposal List</h4>
-                                   
-                                      <div id="proposal-table">
-                                </div>  
                                 </div>
-                                                           
+                                
+                                <div class="card-content table-responsive" >
+                                     <h4 class="card-title">Member List</h4>
+                                     <span class="card-title">Click icons to the right to perform actoins</span>
+                                   
+                                    <table class="table table-hover" >
+                                        <thead class="text-warning">
+                                          
+                                        <tbody id="member-table">                                                                                       
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
-                                            
-                         <!-- row --> 
                     </div>
-
-                    
-                   
+                  
+               </div>     
             <footer class="footer">
                 <div class="container-fluid">
                     <nav class="pull-left">
@@ -233,82 +293,88 @@
                         <script>
                             document.write(new Date().getFullYear())
                         </script>
-                        <a href="http://www.creative-tim.com">Rainbow Revolution <Ledger></Ledger></a>, made with love for a better web
+                       <a href="http://vote.rainbowrevolution.co">Rainbow Revolution<Ledger></Ledger></a>, made with love for a better web
                     </p>
                 </div>
             </footer>
         </div>
     </div>
 
-<!-- Modal idea proposal window start -->
-<div class="modal fade" id="modal-idea-proposal" role="dialog">
-	<div class="modal-dialog">
 
-		<!-- Modal content-->
+
+
+<!-- notice modal -->
+<div class="modal fade" id="noticeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-notice">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="material-icons">clear</i></button>
+				<h5 class="modal-title" id="myModalLabel"></h5>
 			</div>
-			<div class="card">
-				<form role="form" data-toggle="validator" class="validateDontSubmit" id="submit-proposal">
-					<div class="card-header" data-background-color="green">
-						
-						<h4 class="card-title"> <span class="fa fa-question-circle-o"></span> New Proposal</h4>
-					</div>
-					<div class="card-content">
-
-						<div class="form-group label-floating">
-							<label class="control-label">
-                            Proposal title
-                            <small>(required)</small>
-                        </label>
-							<input class="form-control" type="text" id="new-proposal-title-idea" data-minlength="20" required="true">
-							
-						</div>
-
-
-						<div class="form-group label-floating">
-							<label class="control-label">
-                            Proposal Description
-                            <small>(required)</small>
-                        </label>
-							<textarea class="form-control" id="new-proposal-description-idea" rows="6" type="text" data-minlength="20" data-placement="top"
-								required="true"></textarea>							
-						</div>
-
-                        <div class="form-group label-floating">
-							<label class="control-label">
-                            Password
-                            <small>(required)</small>
-                        </label>
-							<input type="password" class="form-control" id="pass-proposal" required="true">
-							<span style='display: none; color:red; ' id="wrong-password-message-integrated">The password is incorect or you are logged with different account.</span>
-						</div>
-
-						<div class="category form-category"><small>(required)</small> - Required fields</div>
-
-						<button type="submit" class="btn btn-default  pull-left" data-dismiss="modal">
-                            <i class="material-icons">cancel</i> Cancel
-                        </button>
-
-						<div class="form-footer text-right">
-							<button type="submit" class="btn btn-success  btn-fill" id="modal-action-new-proposal">
-                                <span class="glyphicon glyphicon-off"></span>
-                                Enter New Idea Propsal 
-                            </button>
+			<div class="modal-body" id="modal-message">
+				<div class="instruction">
+					<div class="row"  id="balance-ether">
+						<div class="col-md-8">
+							<strong>1. You don't have any funds</strong>
+							<p>The first step is to fund your account. 
+								"Your account has 0 Eth balance. You won't be able to execute any functions on this site until you fund your account. Click  <a id='fund-account-message'  href='#' >here</a>  to add some Ether to your<BR></p>
+						   </div>
+						<div class="col-md-4">
+							<div class="picture">
+								<img src="../assets/img/card-1.jpeg" alt="Thumbnail Image" class="img-rounded img-responsive">
+							</div>
 						</div>
 					</div>
-				</form>
+				</div>
+				<div class="instruction">
+					<div class="row">
+						<div class="col-md-8">
+							<strong>2. Buy some tokens</strong>
+							<p>The second step is to purchase tokens. 
+							   "You have 0 balance of tokens. You will be able only to view activity on this site but not participate. Please purchase some tokens <a id='buy-tokens-message'  href='#' >here.</a></p>
+						</div>
+						<div class="col-md-4">
+							<div class="picture">
+								<img src="../assets/img/card-2.jpeg" alt="Thumbnail Image" class="img-rounded img-responsive">
+							</div>
+						</div>
+					</div>
+				</div>
+				<p>If you have more questions, don't hesitate to contact us or send us. We're here to help!</p>
+			</div>
+			<div class="modal-footer text-center">
+				<button type="button" class="btn btn-info btn-round" data-dismiss="modal">Got it!</button>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- Modal idea proposal window end -->
+<!-- end notice modal -->
 
 
+ <!-- Modal progress box start -->
+  <div class="modal fade" id="progress" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content box-windwow">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Blockchain process</h4>
+          <span id="message-status-title"></span>
+        </div>  
+        <div class="modal-body ">
+          <span  id="message-status-body"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
+<!-- Modal progress box end -->
 
+
+      
 <!-- Modal are you sure window start -->
 <div class="modal fade" id="areYouSure" role="dialog">
 	<div class="modal-dialog">
@@ -336,13 +402,13 @@
                             <small>(required)</small>
                         </label>
 							<input type="password" class="form-control" id="pass-are-you-sure" required="true">
-							<span style='display: none; color:red; ' id="wrong-password-message-integrated-sure">The password is incorect or you are logged with different account.</span>
+							<span style='display: none; color:red; ' id="wrong-password-message-integrated">The password is incorect or you are logged with different account.</span>
 						</div>
 
 
 						<div class="category form-category"><small>(required)</small> - Required fields</div>
 
-						<button type="submit" class="btn btn-gray  pull-left" data-dismiss="modal">
+						<button type="submit" class="btn btn-default  pull-left" data-dismiss="modal">
                             <i class="material-icons">cancel</i> Cancel
                         </button>
 
@@ -365,65 +431,182 @@
 <!-- Modal are you sure window end -->
 
 
+<!-- Modal  rules change window start -->
+  <div class="modal fade" id="modal-change-rules" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+          <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+        <div class="card">
+				<form action=""  data-toggle="validator" method="" class="validateDontSubmit" id="change-rules">
+					<div class="card-header" data-background-color="green">		                        				
+						<span class="fa fa-balance-scale"></span>
+						<h4 class="card-title">Change Rules</h4>
+					</div>
+					<div class="card-content">						
+						<div class="form-group label-floating">
+							<label class="control-label">
+                            New Quorum
+                            <small>(required)</small>
+                        </label>
+							<input type="text" class="form-control" id="new-quorum"  pattern="^[1-9][0-9]?$|^100$" required="true">
+						</div>
+                        
+                        <div class="form-group label-floating">
+							<label class="control-label">
+                            New debating period
+                            <small>(required)</small>
+                        </label>
+							<input type="text" class="form-control" id="debating-period"   pattern="^[0-9]{1,}$" required="true">
+						</div>
+
+						<div class="form-group label-floating">
+							<label class="control-label">
+                            Password
+                            <small>(required)</small>
+                        </label>
+							<input type="password" class="form-control" id="pass-rules-change" required="true">
+							<span style='display: none; color:red; ' id="wrong-password-message-integrated">The password is incorect or you are logged with different account.</span>
+						</div>
 
 
-<!-- Modal content window start -->
-<div class="modal fade" id="show-content" role="dialog">
+						<div class="category form-category"><small>(required)</small> - Required fields</div>
+
+						<button type="submit" class="btn btn-gray  pull-left" data-dismiss="modal">
+                            <i class="material-icons">cancel</i> Cancel
+                        </button>
+                        
+						<div class="form-footer text-right">
+							<button type="submit" class="btn btn-success  btn-fill" id="modal-action-new-rules">
+                                Change Rules
+                            </button>
+						</div>
+					</div>
+				</form>
+			</div>  
+  </div> 
+  </div>
+  </div>
+ 
+<!-- Modal  rules change window end -->
+
+
+
+
+
+
+
+
+<!-- Modal  tokens parms change window start -->
+  <div class="modal fade" id="modal-change-token-parms" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+          <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+        <div class="card">
+				<form action=""  data-toggle="validator" method="" class="validateDontSubmit" id="change-token-parms-form">
+					<div class="card-header" data-background-color="green">		                        				
+						<i class="material-icons">settings_input_composite</i>
+						<h4 class="card-title">Change Token Parms</h4>
+					</div>
+					<div class="card-content">						
+						<div class="form-group label-floating">
+							<label class="control-label">
+                            New token price
+                            <small>(required)</small>
+                        </label>
+							<input type="text" class="form-control " id="new-token-price"  pattern="[0-9]+" required="true">
+						</div>
+                        
+                        <div class="form-group label-floating">
+                            <label for="completionDate"><span class="fa fa-calendar"></span> New token sale start date - click to select</label>   							
+                            <small>(required)</small>
+                        </label>
+							<input type="text" class="form-control datetimepicker" id="new-token-sale-start-date"   required="true" >
+						</div>
+
+                         <div class="form-group label-floating">
+							<label for="completionDate"><span class="fa fa-calendar"></span> New token end start date - click to select</label>   							
+                            <small>(required)</small>
+							<input type="text" class="form-control datetimepicker" id="new-token-sale-end-date"   required="true">
+						</div>
+
+						<div class="category form-category"><small>(required)</small> - Required fields</div>
+
+						<button type="submit" class="btn btn-gray  pull-left" data-dismiss="modal">
+                            <i class="material-icons">cancel</i> Cancel
+                        </button>
+                        
+						<div class="form-footer text-right">
+							<button type="submit" class="btn btn-success  btn-fill" id="modal-action-new-token-parms">
+                                Submit new values
+                            </button>
+						</div>
+					</div>
+				</form>
+			</div>  
+  </div> 
+  </div>
+  </div>
+ 
+<!-- Modal  tokes parm change window end -->
+	
+
+
+
+<!-- Modal password  start-->
+<div class="modal fade" id="modal-password" role="dialog">
 	<div class="modal-dialog">
-        	
+
 		<!-- Modal content-->
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
-
 			<div class="card">
-                <div class="card-header" data-background-color="green">
-						
-						<h4 class="card-title" id="content-title"> <i class="material-icons">explore</i> Proposal Info</h4>
+				<form role="form" data-toggle="validator" class="validateDontSubmit" id="password-box-form">
+					<div class="card-header" data-background-color="purple">
+						<h4 class="card-title" id="are-you-sure-title"><span class="glyphicon glyphicon-lock"></span> Please provide your password</h4>
 					</div>
 					<div class="card-content">
-                         <div id="content-to-show" ></div>    
-                </div>
-               </div>
+						<div class="form-group label-floating">
+							<label class="control-label">
+                            Password
+                            <small>(required)</small>
+                        </label>
+							<input type="password" class="form-control" id="pass" required="true">
+							<span style='display: none; color:red; ' id="wrong-password-message-integrated">The password is incorect or you are logged with different account.</span>
+						</div>
+						<div class="category form-category"><small>(required)</small> - Required fields</div>
+
+						<button type="submit" class="btn btn-success  pull-left" data-dismiss="modal">
+                            <i class="material-icons">cancel</i> Cancel
+                        </button>
+
+						<div class="form-footer text-right">
+							<button type="submit" class="btn btn-primary  btn-fill" id="modal-action-password">
+                                Enter
+                            </button>
+
+							<input id="parm1" type="text" hidden>
+							<input id="parm2" type="text" hidden>
+						</div>
+				</form>
+				</div>
+
 			</div>
+
 		</div>
 	</div>
+	<!-- Modal password  end-->
 
-</div>
-
-
-<!-- Modal are you sure window end -->
-
-
-
-  
-
-
-
- <!-- Modal progress box start -->
-  <div class="modal fade" id="progress" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content box-windwow">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Blockchain process</h4>
-          <span id="message-status-title"></span>
-        </div>  
-        <div class="modal-body ">
-          <span  id="message-status-body"></span>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-<!-- Modal progress box end -->
-
-<!-- Modal buy tokens window start -->
+    <!-- Modal buy tokens window start -->
 <div class="modal fade" id="buy-tokens-modal" role="dialog">
 	<div class="modal-dialog">
 
@@ -437,13 +620,13 @@
 					<div class="card-header" data-background-color="green">
 						<h4 class="card-title" id="sure-mesasge-title"></h4>
 						<i class="material-icons">language</i>
-						<h4 class="card-title">Buy Tokens</h4>
+						<h4 class="card-title" id="add-token-title">Buy Tokens</h4>
 					</div>
 					<div class="card-content">
 						<div id="sure-mesasge-text"></div>
 						<div class="form-group label-floating">
 							<label class="control-label">
-                            Tokens to purchase
+                            Amount of Tokens
                             <small>(required)</small>
                         </label>
 							<input type="text" class="form-control" id="token-amount" pattern="[0-9]{1,}$" required="true">
@@ -469,6 +652,7 @@
 							<button type="submit" class="btn btn-success btn-fill" id="modal-action-buy-tokens">
                                 Buy Tokens
                             </button>
+                            <input id="parm1" type="text" hidden>
 						</div>
 					</div>
 				</form>
@@ -480,8 +664,6 @@
 </div>
 </div>
 <!-- Modal buy tokens  window end -->
-
-
 
 <!-- Modal register  window start -->
   <div class="modal fade" id="modal-register" role="dialog">
@@ -641,7 +823,6 @@
 </div>
 
 
-
 <!-- javascript for validation -->
 
 
@@ -694,7 +875,6 @@
  <script src="../dist/js/jquery.bootstrap.wizard.js"></script>
 
 
-
 <script type="text/javascript">   
 
 function autorun(){
@@ -704,6 +884,7 @@ function autorun(){
    else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
    else window.onload = autorun;
     
+
 
 </script>
 
